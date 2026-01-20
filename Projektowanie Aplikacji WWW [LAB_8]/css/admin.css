@@ -1,0 +1,208 @@
+* 
+{ 
+    box-sizing: border-box; 
+}
+
+body
+{
+
+    margin: 0px;
+    background-color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/*CSS - LOGIN PANEL*/
+
+.blad_logowania
+{
+    color: red;
+    font-size: 13px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logowanie 
+{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logowanie input
+{
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: none;
+    background: #2a2a2a;
+    color: white;
+    font-size: 14px;   
+}
+
+.logowanie input::placeholder
+{
+    color: #888;
+}
+
+.logowanie input::focus
+{
+    outline: none;
+    background: #333;
+}
+
+.logowanie button
+{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #006eff, #ff009d);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;  
+}
+
+.logowanie form {
+    width: 320px;
+    padding: 30px;
+    background: #1c1c1c;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*CSS - SITES MANAGMENT*/
+
+h2
+{
+    color: red;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+table {
+    display: table;       
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;           
+    max-width: 1000px;     
+    border-collapse: collapse;
+}
+
+
+.table-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+table {
+    display: table;
+    border-collapse: collapse;
+    background-color: #2a2a2a; 
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+th {
+    background-color: #2a2a2a; 
+}
+
+.btn-add {
+    display: inline-block;  
+    background-color: #28a745; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;    
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.edit
+{
+    background-color: #b49634;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.delete
+{
+    background-color: #e74040;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;    
+}
+
+/*CSS - SITES EDITOR*/
+
+.edycja h1, .dodawanie h1
+{
+
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+.edycja label, .dodawanie label
+{
+    color: white;
+}
+
+.edycja a, .dodawanie a
+{
+    margin: 20px auto;          
+    background-color: #c28e00;  
+    color: white;               
+    padding: 12px 25px;         
+    border: none;               
+    border-radius: 5px;         
+    font-size: 16px;            
+    font-weight: bold;          
+    cursor: pointer; 
+
+}
+
+.edycja input[type="submit"], .dodawanie input[type="submit"]
+{            
+    margin: 20px auto;          
+    background-color: #00ac00;  
+    color: white;               
+    padding: 12px 25px;         
+    border: none;               
+    border-radius: 5px;         
+    font-size: 16px;            
+    font-weight: bold;          
+    cursor: pointer;            
+}
+
+/*===*/
+
