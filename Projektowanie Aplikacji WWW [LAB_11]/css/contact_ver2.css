@@ -1,0 +1,129 @@
+/* Tło całej strony */
+body {
+    background-color: #141414; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial';
+}
+
+/* Okno */
+.formularz-kontakt {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    width: 450px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: white;
+}
+
+.formularz-kontakt h2 {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Tabela i etykiety */
+.tabela-kontakt {
+    width: 100%;
+}
+
+.tabela-kontakt td {
+    padding: 10px 0;
+}
+
+/* Pola tekstowe */
+.input-pole, .textarea-pole {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-pole:focus, .textarea-pole:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #00d4ff; 
+}
+
+/* Przycisk z gradientem */
+.button-wyslij {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00d4ff, #ff00ea);
+    background-size: 200% auto;
+    transition: 0.5s;
+}
+
+.button-wyslij:hover {
+    background-position: right center; 
+    box-shadow: 0 0 15px rgba(255, 0, 234, 0.4);
+}
+
+/* Przycisk przypominania*/
+input[name="przypomnij_haslo"] {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #ff00ea;
+    color: #ff00ea;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+input[name="przypomnij_haslo"]:hover {
+    background: rgba(255, 0, 234, 0.1);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+}
+
+/*komunikat błędów*/
+.status-msg {
+    background: rgba(255, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: #ffcccc;
+    font-size: 14px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+/*przycisk do przypominania hasła */
+.button-przypomnij {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.button-przypomnij:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
