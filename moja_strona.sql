@@ -1,0 +1,253 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sty 27, 2026 at 10:18 PM
+-- Wersja serwera: 10.4.32-MariaDB
+-- Wersja PHP: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `moja_strona`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `kategorie`
+--
+
+CREATE TABLE `kategorie` (
+  `id` int(11) NOT NULL,
+  `matka` int(11) DEFAULT 0,
+  `nazwa` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `kategorie`
+--
+
+INSERT INTO `kategorie` (`id`, `matka`, `nazwa`) VALUES
+(2, 0, 'Commodore'),
+(3, 0, 'IBM'),
+(4, 0, 'Macintosh'),
+(8, 2, 'Commodore 64'),
+(9, 2, 'Amiga 500'),
+(10, 2, 'VIC-20'),
+(11, 3, 'IBM PC 5150'),
+(12, 3, 'IBM PC/AT'),
+(13, 3, 'IBM PS/2'),
+(14, 4, 'Macintosh 128K'),
+(15, 4, 'Macintosh Plus'),
+(16, 4, 'Macintosh Classic'),
+(24, 23, 'FBC (French Baguette Computer) Version II'),
+(25, 0, 'Vergicentronix '),
+(27, 2, 'Amiga 400'),
+(28, 0, 'TEST'),
+(29, 28, 'test 1'),
+(30, 0, 'Atari'),
+(31, 30, 'Atari Famicon');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `page_list`
+--
+
+CREATE TABLE `page_list` (
+  `id` int(11) NOT NULL,
+  `page_title` varchar(255) NOT NULL,
+  `page_content` text NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `page_list`
+--
+
+INSERT INTO `page_list` (`id`, `page_title`, `page_content`, `status`) VALUES
+(1, 'glowna_zawartosc_index.html', '    <section class=\"hero\">\r\n        <div class=\"hero-text\">\r\n            <h1>Magazyny danych oparte na technologii chmury </h1>\r\n            <p>Rozwiązania chmurowe zapewniają wysoki poziom bezpieczeństwa danych, automatyczne kopie zapasowe oraz dużą elastyczność — użytkownik może w każdej chwili zwiększyć lub zmniejszyć dostępną przestrzeń. Magazyny chmurowe są wykorzystywane zarówno przez osoby prywatne, jak i firmy, które przechowują w nich dokumenty, zdjęcia, filmy czy dane projektowe.</p>\r\n        </div>\r\n        <div class=\"hero-image\"></div>\r\n    </section>', 1),
+(2, '3_offer.html', '    <title>Free_space pricing</title>\r\n    <link rel=\"stylesheet\" href=\"../css/3_offer.css\">\r\n\r\n\r\n\r\n    <div class=\"main-title\">\r\n        <h1>Wybierz plan</h1>\r\n        <p>wybierz najbardziej odpowiadający plan i dowiedz się więcej</p>\r\n    </div>\r\n\r\n    <div class=\"card-container\">\r\n\r\n\r\n        <div class=\"card\">\r\n            <div class=\"card-title\">Podstawowy <p><s>10zł</s> <span class=\"discount-new-price\">7,50zł</span> <span class=\"month\"> / miesiąc</span></p></div>\r\n            <ul class=\"features\">\r\n                <li>100 GB miejsca w chmurze na dane</li>\r\n                <li>Dostęp do supportu</li>\r\n                <li>Anuluj kiedy chcesz</li>\r\n            </ul>\r\n            <a class=\"button-card\" href=\"index.php?idp=oferta_basic\">dowiedz się więcej</a>\r\n        </div>\r\n\r\n        <div class=\"card\">\r\n            <div class=\"card-title\">Rozszerzony <p><s>200zł</s> <span class=\"discount-new-price\">150zł</span> <span class=\"month\"> / miesiąc</span></p></div>\r\n            <ul class=\"features\">\r\n                <li>500 GB miejsca w chmurze na dane</li>\r\n                <li>2-godzinne sesje do chmur obliczeniowych (200 h / miesiąc)</li>\r\n                <li>Krótszy czas oczekiwania w kolejce do supportu</li>\r\n                <li>Anuluj kiedy chcesz</li>\r\n            </ul>\r\n            <a class=\"button-card\" href=\"index.php?idp=oferta_extended\">dowiedz się więcej</a>\r\n        </div>\r\n\r\n        <div class=\"card\">\r\n            <div class=\"card-title\">Rozszerzony plus <p><s>700zł</s> <span class=\"discount-new-price\">525zł</span><span class=\"month\"> / miesiąc</span></p></div>\r\n            <ul class=\"features\">\r\n                <li>2 TB miejsca w chmurze na dane</li>\r\n                <li>Nieograniczone sesje do chmur obliczeniowych</li>\r\n                <li>Chmury dla zespołów</li>\r\n                <li>Pierwszeństwo w kolejce do supportu</li>\r\n                <li>Koszulka 🎁</li>\r\n                <li>Anuluj kiedy chcesz</li>\r\n            </ul>\r\n            <a class=\"button-card\" href=\"index.php?idp=oferta_plus\">dowiedz się więcej</a>\r\n        </div>\r\n\r\n\r\n    </div>\r\n\r\n', 1),
+(3, 'basic.html', ' <link rel=\"stylesheet\" href=\"css/3_offer_subsites.css\">\r\n\r\n <title>Free_space basic_plan</title>\r\n\r\n\r\n<header>\r\n    <h1>Plan Podstawowy</h1>\r\n    <p>Bezpieczne i proste przechowywanie danych w chmurze</p>\r\n</header>\r\n\r\n<main class=\"container\">\r\n\r\n    <section class=\"plan-intro\">\r\n        <img src=\"images/basic_server.png\" alt=\"Serwer podstawowy\">\r\n        <div>\r\n            <h2>Dla kogo jest ten plan?</h2>\r\n            <p>\r\n                Plan Podstawowy jest idealny dla użytkowników indywidualnych\r\n                oraz małych projektów. Zapewnia bezpieczne miejsce na dane\r\n                oraz stały dostęp do nich z dowolnego miejsca.\r\n            </p>\r\n        </div>\r\n    </section>\r\n\r\n<section>\r\n    <h2>Korzyści</h2>\r\n    <ul class=\"benefits\">\r\n        <li>\r\n            <strong>100 GB przestrzeni w chmurze</strong>\r\n            <p>Bezpieczne miejsce na Twoje pliki, zdjęcia i dokumenty. Idealne do codziennego przechowywania danych.</p>\r\n        </li>\r\n        <li>\r\n            <strong>Dostęp do supportu</strong>\r\n            <p>Wsparcie techniczne dostępne w godzinach pracy — szybkie odpowiedzi na pytania.</p>\r\n        </li>\r\n        <li>\r\n            <strong>Anuluj kiedy chcesz</strong>\r\n            <p>Brak długoterminowych zobowiązań. Pełna elastyczność w zarządzaniu subskrypcją.</p>\r\n        </li>\r\n    </ul>\r\n</section>\r\n\r\n\r\n    <section>\r\n        <h2>Specyfikacja techniczna</h2>\r\n        <table>\r\n            <tr>\r\n                <th>Parametr</th>\r\n                <th>Wartość</th>\r\n            </tr>\r\n            <tr>\r\n                <td>Pojemność</td>\r\n                <td>100 GB</td>\r\n            </tr>\r\n            <tr>\r\n                <td>Szyfrowanie</td>\r\n                <td>AES-256</td>\r\n            </tr>\r\n            <tr>\r\n                <td>Kopie zapasowe</td>\r\n                <td>Codzienne</td>\r\n            </tr>\r\n        </table>\r\n    </section>\r\n\r\n</main>\r\n\r\n\r\n\r\n\r\n', 1),
+(4, 'extended.html', '<link rel=\"stylesheet\" href=\"css/3_offer_subsites.css\">\r\n<title>Free_space extended_plan</title>\r\n\r\n<header>\r\n    <h1>Plan Rozszerzony</h1>\r\n    <p>Więcej przestrzeni i mocy obliczeniowej</p>\r\n</header>\r\n\r\n<main class=\"container\">\r\n\r\n    <section class=\"plan-intro\">\r\n        <img src=\"images/extended_server.png\" alt=\"Serwer rozszerzony\">\r\n        <div>\r\n            <h2>Większa wydajność</h2>\r\n            <p>\r\n                Plan Rozszerzony umożliwia korzystanie z chmur obliczeniowych,\r\n                co pozwala na przetwarzanie danych oraz uruchamianie\r\n                bardziej zaawansowanych aplikacji.\r\n            </p>\r\n        </div>\r\n    </section>\r\n\r\n<section>\r\n    <h2>Korzyści</h2>\r\n    <ul class=\"benefits\">\r\n        <li>\r\n            <strong>500 GB miejsca w chmurze</strong>\r\n            <p>Większa przestrzeń do przechowywania plików i baz danych dla średnich projektów.</p>\r\n        </li>\r\n        <li>\r\n            <strong>2-godzinne sesje obliczeniowe (200 h / miesiąc)</strong>\r\n            <p>Możliwość korzystania z mocy obliczeniowej chmury do analiz, testów i aplikacji wymagających zasobów.</p>\r\n        </li>\r\n        <li>\r\n            <strong>Krótszy czas oczekiwania na support</strong>\r\n            <p>Zgłoszenia rozwiązywane szybciej niż w planie podstawowym.</p>\r\n        </li>\r\n        <li>\r\n            <strong>Anuluj kiedy chcesz</strong>\r\n            <p>Elastyczność i brak długoterminowych zobowiązań.</p>\r\n        </li>\r\n    </ul>\r\n</section>\r\n\r\n\r\n    <section>\r\n        <h2>Specyfikacja techniczna</h2>\r\n        <table>\r\n            <tr>\r\n                <th>Parametr</th>\r\n                <th>Wartość</th>\r\n            </tr>\r\n            <tr>\r\n                <td>Pojemność</td>\r\n                <td>500 GB</td>\r\n            </tr>\r\n            <tr>\r\n                <td>Sesje obliczeniowe</td>\r\n                <td>200 h / miesiąc</td>\r\n            </tr>\r\n            <tr>\r\n                <td>Priorytet supportu</td>\r\n                <td>Średni</td>\r\n            </tr>\r\n        </table>\r\n    </section>\r\n\r\n</main>\r\n\r\n\r\n', 1),
+(5, 'extended_plus.html', '<link rel=\"stylesheet\" href=\"css/3_offer_subsites.css\">\r\n<title>Free_space extended_plus_plan</title>\r\n\r\n\r\n<header>\r\n    <h1>Plan Rozszerzony Plus</h1>\r\n    <p>Profesjonalne rozwiązania chmurowe dla zespołów</p>\r\n</header>\r\n\r\n<main class=\"container\">\r\n\r\n    <section class=\"plan-intro\">\r\n        <img src=\"images/extended_plus_server.png\" alt=\"Serwer rozszerzony plus\">\r\n        <div>\r\n            <h2>Maksymalna wydajność</h2>\r\n            <p>\r\n                Plan Rozszerzony Plus jest przeznaczony dla firm i zespołów,\r\n                które potrzebują nieograniczonego dostępu do mocy obliczeniowej,\r\n                dużej przestrzeni oraz najwyższego priorytetu wsparcia.\r\n            </p>\r\n        </div>\r\n    </section>\r\n\r\n<section>\r\n    <h2>Korzyści</h2>\r\n\r\n    <ul class=\"benefits\">\r\n        <li>\r\n            <strong>2 TB przestrzeni w chmurze</strong>\r\n            <p>\r\n                Duża ilość miejsca pozwala na przechowywanie plików,\r\n                baz danych oraz kopii zapasowych bez obaw o brak przestrzeni.\r\n            </p>\r\n        </li>\r\n\r\n        <li>\r\n            <strong>Nieograniczone sesje obliczeniowe</strong>\r\n            <p>\r\n                Możliwość uruchamiania dowolnej liczby procesów obliczeniowych\r\n                bez limitu czasu, idealne dla wymagających projektów.\r\n            </p>\r\n        </li>\r\n\r\n        <li>\r\n            <strong>Chmury zespołowe</strong>\r\n            <p>\r\n                Umożliwiają współpracę wielu użytkowników na wspólnych zasobach,\r\n                co znacząco usprawnia pracę zespołów projektowych.\r\n            </p>\r\n        </li>\r\n\r\n        <li>\r\n            <strong>Pierwszeństwo w kolejce do supportu</strong>\r\n            <p>\r\n                Zgłoszenia są obsługiwane w pierwszej kolejności przez\r\n                dedykowany zespół wsparcia technicznego.\r\n            </p>\r\n        </li>\r\n\r\n        <li>\r\n            <strong>Koszulka 🎁</strong>\r\n            <p>\r\n                Dodatkowy bonus dla klientów planu Rozszerzony Plus —\r\n                firmowa koszulka wysyłana po aktywacji usługi.\r\n            </p>\r\n        </li>\r\n\r\n        <li>\r\n            <strong>Anuluj kiedy chcesz</strong>\r\n            <p>\r\n                Brak długoterminowych zobowiązań — pełna elastyczność\r\n                w zarządzaniu subskrypcją.\r\n            </p>\r\n        </li>\r\n    </ul>\r\n</section>\r\n\r\n\r\n    <section>\r\n        <h2>Specyfikacja techniczna</h2>\r\n        <table>\r\n            <tr>\r\n                <th>Parametr</th>\r\n                <th>Wartość</th>\r\n            </tr>\r\n            <tr>\r\n                <td>Pojemność</td>\r\n                <td>2 TB</td>\r\n            </tr>\r\n            <tr>\r\n                <td>Sesje obliczeniowe</td>\r\n                <td>Bez limitu</td>\r\n            </tr>\r\n            <tr>\r\n                <td>Priorytet supportu</td>\r\n                <td>Najwyższy</td>\r\n            </tr>\r\n        </table>\r\n    </section>\r\n\r\n</main>\r\n\r\n\r\n\r\n\r\n', 1),
+(6, 'filmy.html', '<!--AWS Tutorial for Beginners (2025) – Step-by-Step Guide to Cloud Computing-->\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Nzv-tzU-UAw?si=T831YfjZH7pq-JOl\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\r\n\r\n<!--Cloud Computing in 2 Minutes-->\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/N0SYCyS2xZA?si=FHidYhQ6mze02mDp\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\r\n\r\n<!--What is The Cloud? A Basic Overview | Mashable Explains-->\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Mzl4Wud_Bp0?si=eOIv4TY0ZjeHMtNl\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>', 1),
+(7, 'contact.html', '    <link rel=\"stylesheet\" href=\"css/contact.css\">\r\n    <title>Free_space contact form</title>\r\n\r\n\r\n    <section class=\"main-question-form\">\r\n\r\n        <div class=\"question\">\r\n            <h1>\r\n                Pytania<br>\r\n                Niejasności<br>\r\n                Napisz do nas!\r\n            </h1>\r\n            <p>Zespół doradców pomoże wybrać najbardziej odpowiednie rozwiązanie dla klienta.</p>\r\n        </div>\r\n\r\n\r\n        <div class=\"question-form\">\r\n            <form action=\"mailto:twojemail@example.com\" method=\"post\" enctype=\"text/plain\">\r\n                <h2>Skontaktuj się z nami</h2>\r\n\r\n                <label for=\"name\">Imię i nazwisko</label>\r\n                <input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Wpisz swoje imię i nazwisko\" required>\r\n\r\n                <label for=\"email\">Email</label>\r\n                <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Wpisz swój email\" required>\r\n\r\n                <label for=\"subject\">Temat</label>\r\n                <input type=\"text\" id=\"subject\" name=\"subject\" placeholder=\"Temat wiadomości\" required>\r\n\r\n                <label for=\"message\">Wiadomość</label>\r\n                <textarea id=\"message\" name=\"message\" rows=\"6\" placeholder=\"Napisz wiadomość\" required></textarea>\r\n\r\n                <button type=\"submit\">Wyślij</button>\r\n            </form>\r\n        </div>\r\n\r\n    </section>\r\n', 1),
+(8, 'sklep.html', '<h1> sklep retro </h1>\r\n<p> strona o sklepie retro </p>', 1),
+(17, 'dodana_strona_testowa_v5.html', '<p> hello world 1</p>\r\n<p> hello world 2</p>\r\n<p> hello world 3</p>\r\n<p> hello world 3</p>', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `produkty`
+--
+
+CREATE TABLE `produkty` (
+  `id` int(11) NOT NULL,
+  `tytul` varchar(255) NOT NULL,
+  `producent` varchar(100) DEFAULT NULL,
+  `opis` text DEFAULT NULL,
+  `data_utworzenia` datetime DEFAULT current_timestamp(),
+  `data_modyfikacji` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `data_wygasniecia` datetime DEFAULT NULL,
+  `cena_netto` decimal(10,2) NOT NULL,
+  `podatek_vat` decimal(5,2) DEFAULT 23.00,
+  `ilosc_magazyn` int(11) DEFAULT 0,
+  `status_dostepnosci` int(11) DEFAULT 1,
+  `kategoria_id` int(11) DEFAULT NULL,
+  `gabaryt` varchar(50) DEFAULT NULL,
+  `zdjecie_link` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `produkty`
+--
+
+INSERT INTO `produkty` (`id`, `tytul`, `producent`, `opis`, `data_utworzenia`, `data_modyfikacji`, `data_wygasniecia`, `cena_netto`, `podatek_vat`, `ilosc_magazyn`, `status_dostepnosci`, `kategoria_id`, `gabaryt`, `zdjecie_link`) VALUES
+(3, 'Amiga 500', 'Commodore', 'sprzedam tanio ', '2026-01-20 18:07:15', '2026-01-25 14:30:05', '2026-01-30 18:37:00', 12222.00, 23.00, 5, 1, 9, '100x100x30', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Amiga500_system.jpg/1280px-Amiga500_system.jpg'),
+(4, 'Amiga 500 plus', 'Commodore', 'Amiga 500 plus, sprzedam tanio. Stan ok ', '2026-01-20 18:17:06', '2026-01-25 14:31:17', '2026-02-04 18:17:00', 5000.00, 23.00, 1, 1, 9, '140x100x30', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Amiga_500_Plus_%28white_background%29.jpg/250px-Amiga_500_Plus_%28white_background%29.jpg'),
+(6, 'macintosh 128k (1983) - STAN IGIEŁKA', 'Apple', 'wygląda trochę jak Amiga 500 ale jest to macintosh 128k (1983). NO SCAM', '2026-01-20 18:44:57', '2026-01-25 14:31:04', '2026-01-31 18:44:00', 420.00, 23.00, 1, 1, 14, 'no taki średni', 'https://static.android.com.pl/uploads/2022/12/Amiga-500-wyrozniajace-scaled.jpg'),
+(7, 'macintosh 128k (nowy) okazja', 'Apple', 'Sklep retro ma na sprzedaż komputer Macintosh 128k', '2026-01-21 00:00:36', '2026-01-25 14:30:47', '2026-01-29 00:00:00', 4000.00, 23.00, 4, 1, 8, 'Mały', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Macintosh_128k_transparency.png/250px-Macintosh_128k_transparency.png'),
+(8, 'Amiga 400', 'Commodore', 'test', '2026-01-25 17:00:36', '2026-01-25 17:19:12', '2026-01-29 16:59:00', 111.00, 23.00, 11, 1, 27, '100x100x30', 'https://upload.wikimedia.org/wikipedia/commons/a/a2/Amiga_4000_desktop_original.png'),
+(9, 'Atari Famicon - okazja', 'Atari', 'sprzedam atari famicon tanio', '2026-01-27 21:34:28', '2026-01-27 21:36:34', '2026-01-29 21:33:00', 790.00, 23.00, 1, 1, 31, 'Mały', 'https://images.morele.net/i1064/6417732_0_i1064.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `uzytkownicy`
+--
+
+CREATE TABLE `uzytkownicy` (
+  `id` int(11) NOT NULL,
+  `login` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `haslo` varchar(255) NOT NULL,
+  `token` varchar(100) DEFAULT NULL,
+  `status` int(11) DEFAULT 0,
+  `data_utworzenia` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `uzytkownicy`
+--
+
+INSERT INTO `uzytkownicy` (`id`, `login`, `email`, `haslo`, `token`, `status`, `data_utworzenia`) VALUES
+(15, 'test', 'j.pucyk12@wp.pl', '$2y$10$tAJM/J8l074vu6LUpZwB9.VfjCeJhPyLzAuznAWq8bwbiimvZhUxC', '', 1, '2026-01-27 21:19:26');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `zamowienia`
+--
+
+CREATE TABLE `zamowienia` (
+  `id` int(11) NOT NULL,
+  `id_uzytkownika` int(11) NOT NULL,
+  `produkty` text NOT NULL,
+  `suma_brutto` decimal(10,2) NOT NULL,
+  `data_zamowienia` datetime DEFAULT current_timestamp(),
+  `status_zamowienia` varchar(20) DEFAULT 'Nowe'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `zamowienia`
+--
+
+INSERT INTO `zamowienia` (`id`, `id_uzytkownika`, `produkty`, `suma_brutto`, `data_zamowienia`, `status_zamowienia`) VALUES
+(6, 13, '- Amiga 400 (x1) - 136.53 zł\n', 136.53, '2026-01-26 16:12:30', 'Wysłane'),
+(7, 15, '- Amiga 500 (x1) - 15,033.06 zł\n', 15033.06, '2026-01-27 21:22:12', 'Nowe');
+
+--
+-- Indeksy dla zrzutów tabel
+--
+
+--
+-- Indeksy dla tabeli `kategorie`
+--
+ALTER TABLE `kategorie`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `page_list`
+--
+ALTER TABLE `page_list`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `produkty`
+--
+ALTER TABLE `produkty`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `kategoria_id` (`kategoria_id`);
+
+--
+-- Indeksy dla tabeli `uzytkownicy`
+--
+ALTER TABLE `uzytkownicy`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `login` (`login`);
+
+--
+-- Indeksy dla tabeli `zamowienia`
+--
+ALTER TABLE `zamowienia`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `kategorie`
+--
+ALTER TABLE `kategorie`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `page_list`
+--
+ALTER TABLE `page_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `produkty`
+--
+ALTER TABLE `produkty`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `uzytkownicy`
+--
+ALTER TABLE `uzytkownicy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `zamowienia`
+--
+ALTER TABLE `zamowienia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `produkty`
+--
+ALTER TABLE `produkty`
+  ADD CONSTRAINT `produkty_ibfk_1` FOREIGN KEY (`kategoria_id`) REFERENCES `kategorie` (`id`) ON DELETE SET NULL;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
