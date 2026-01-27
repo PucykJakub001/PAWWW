@@ -1,0 +1,470 @@
+body {
+    background: #c5b9a5;
+    color: #eeeeee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #222;
+}
+
+.main-header h1 {
+    font-size: 2.8em;
+    margin: 0;
+    color: #E24627;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+}
+
+.main-header .subtitle {
+    color: #E24627;
+    font-size: 0.4em;
+    vertical-align: middle;
+    border: 1px solid #E24627;
+    padding: 2px 8px;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.main-header p {
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Siatka produktów */
+.produkty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produkt-karta {
+    background: #1e1e1e;
+    border: 1px solid #333333;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produkt-karta:hover {
+    border-color: #E24627;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.produkt-karta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.opis-prod {
+    font-size: 0.85em;
+    color: #aaaaaa;
+    height: 55px;      
+    line-height: 1.5; 
+    overflow: hidden;
+    position: relative; 
+    margin: 10px 0;
+}
+
+.opis-prod::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(transparent, #1e1e1e); 
+}
+
+.data-wyg {
+    font-size: 0.8em;
+    color: #ff9800;
+    margin: 5px 0;
+}
+
+.cena {
+    font-weight: bold;
+    color: #E24627;
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+/* Sekcja Koszyka  */
+.koszyk-sekcja {
+    max-width: 1100px;
+    margin: 80px auto 40px auto;
+    background: #181818;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222222;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    border-bottom: 2px solid #333333;
+    padding: 15px;
+    color: #E24627;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #222222;
+}
+
+.suma-brutto {
+    text-align: right;
+    font-size: 1.8em;
+    margin-top: 30px;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.btn-koszyk {
+    background: #E24627;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-usun {
+    color: #E24627;
+    text-decoration: none;
+}
+
+/* szybka naprawa linka*/
+.link_main {
+    text-decoration: none;
+    color: #E24627;
+}
+
+/*okienko wyszukiwarki*/
+
+.wyszukiwarka {
+    color: black;
+}
+
+.wyszukiwarka { 
+    background: #afa695; 
+    padding: 20px; 
+    border: 2px solid #E24627; 
+    margin: 20px auto; 
+    max-width: 1000px; 
+    display: flex; 
+    gap: 15px; 
+    flex-wrap: wrap; 
+    align-items: flex-end; 
+    justify-content: center; 
+}
+
+.wyszukiwarka input, .wyszukiwarka select { 
+    padding: 8px; 
+    border: 1px solid #999; 
+}
+.btn-szukaj { 
+    background: #E24627; 
+    color: black; 
+    border: none; 
+    padding: 8px 20px; 
+    cursor: pointer; 
+}
+
+.btn-szukaj:hover { 
+    background: #E24627; 
+}
+
+/*formularz rejestracji*/
+
+.reg-form { 
+    max-width: 400px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background: #f9f9f9;
+    box-shadow: 10px 10px 0px #2c3e50;
+    color: black; 
+}
+
+.reg-form input { 
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    box-sizing: border-box; 
+}
+
+.btn-reg { 
+    background: #2c3e50; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+.btn-reg:hover { 
+    background: #e74c3c; 
+}
+
+/*okienko logowania*/
+
+
+.login-form { 
+    max-width: 350px; 
+    margin: 100px auto; 
+    padding: 25px; 
+    border: 2px solid #2c3e50; 
+    background: #fff; 
+    box-shadow: 10px 10px 0px #2c3e50;
+    color: black;
+}
+
+.error-box { 
+    background: #ffcccc; 
+    color: #cc0000; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    font-size: 14px; 
+    border: 1px solid #cc0000; 
+}
+
+.login-form input { 
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #999; 
+}
+
+.btn-login { 
+    background: #2c3e50; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold; 
+    width: 100% !important; 
+}
+
+.btn-login:hover { 
+    background: #e74c3c; 
+}
+
+/* Styl dla paska użytkownika */
+
+.user-info-bar {
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+.user-info-bar a { 
+    color: #3498db; 
+    text-decoration: none; 
+    margin-left: 10px; 
+}
+
+.user-info-bar a.logout { 
+    color: #e74c3c; 
+}
+
+.btn-inactive { 
+    background: #95a5a6; 
+    cursor: not-allowed; 
+}
+
+/*sklep - zamówienia użytkownika*/
+
+
+.orders-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+.orders-table th, .orders-table td { 
+    border: 1px solid #ddd; 
+    padding: 12px; 
+    text-align: left;
+    background-color: #435e79; 
+}
+
+.orders-table th { 
+    background-color: #2c3e50; 
+    color: white; 
+}
+
+.status-tag { 
+    padding: 5px 10px; 
+    border-radius: 4px; 
+    font-size: 0.8em; 
+    font-weight: bold; 
+    background: #eee;
+    color: black; 
+}
+
+/*podsumowanie*/
+
+.summary-container {
+    color: #000;
+    max-width: 600px;
+    margin: 50px auto;
+    border: 2px solid #2c3e50;
+    padding: 20px;
+    background: #fff;
+}
+
+.summary-list {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.summary-list pre {
+    font-family: inherit; 
+    font-size: 14px;
+    white-space: pre-wrap;
+    color: black;
+}
+
+.total-price {
+    color: #2c3e50;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 20px;
+}
+
+.btn-order {
+    padding: 15px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-order:hover {
+    background: #219150;
+}
+
+.link-center {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+}
+
+/*podstrony produktów*/
+
+
+.produkt-detale {
+    max-width: 900px;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    color: black;
+}
+
+.foto-duze {
+    flex: 1;
+}
+
+.foto-duze img {
+    width: 100%;
+    border: 5px solid #eee;
+}
+
+.foto-duze .brak-foto {
+    width: 100%;
+    height: 300px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.info-duze {
+    flex: 1;
+}
+
+.producent-label {
+    color: black;
+}
+
+.cena-duza {
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.vat-info {
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
+}
+
+.powrot {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #3498db;
+}
+
+.input-ilosc {
+    width: 60px;
+    padding: 5px;
+}
+
+.btn-detale {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #27ae60;
+    color: black;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-detale:hover {
+    background: #219150;
+}

@@ -1,0 +1,126 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   /* outline: 1px solid red;  */ 
+}
+
+body
+{
+    background-color: rgb(107, 107, 107);
+}
+
+.main-title
+{
+    color: rgb(34, 34, 34);
+    font-size: 30px;
+    font-family: Arial;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.main-title p
+{
+    font-size: 19px;
+}
+
+.card-container
+{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: rgb(238, 238, 238);
+    flex: 1 1 250px;
+    text-align: left;
+    font-size: 20px;
+    color: rgb(34, 34, 34);
+    font-weight: 200;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.features li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2ecc71; 
+    font-weight: bold;
+}
+
+.card:hover
+{
+    background-color: rgb(228, 243, 255);
+    transition: 0.5s;
+}
+
+.card-title
+{
+    border-radius: 10px;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    font: 30px;
+    font-family: sans-serif;
+    padding: 30px;
+}
+
+.card-title p
+{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.month
+{
+    font-size: 15px;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.button-card {
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    margin-top: auto; 
+    text-align: center;
+    background-color: white;
+    font-family: sans-serif;
+    color: inherit;
+}
+
+.discount-new-price
+{
+    color: red;
+}
